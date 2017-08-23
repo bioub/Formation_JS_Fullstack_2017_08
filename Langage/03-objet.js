@@ -1,5 +1,6 @@
 // 1 - En JS on manipule des objets existants
 console.log(typeof Math); // object
+console.log(typeof JSON); // object
 console.log(typeof console); // object
 console.log(typeof process); // object
 console.log(typeof document); // undefined
@@ -26,10 +27,11 @@ console.log(coordsFromJSON.x); // 30
 console.log(JSON.stringify(coords)); // ES5 (IE8)
 
 // En JSON uniquement :
-// - primitifs: string, number, boolean
+// - primitifs: string (double quote), number, boolean
 // - literal: string, object, array, regexp
+// pas de commentaires
 
-// 5 - Les objets JS sont extensible
+// 5 - Les objets JS sont extensibles
 coords.z = 30;
 
 console.log(Math.sum); // undefined
@@ -107,6 +109,7 @@ console.log(Contact.getClass()); // Contact
 
 // Appeler une méthode du prototype
 console.log(romain.hello()); // Bonjour
+console.log(romain.hello === eric.hello); // true
 
 // Appeler une méthode d'un prototype hérité
 console.log(romain.prenom !== undefined); // true

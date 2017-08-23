@@ -58,6 +58,8 @@ const jouer = function() {
     console.log('Gagné');
     rl.close();
   });
+
+
 };
 
 jouer();

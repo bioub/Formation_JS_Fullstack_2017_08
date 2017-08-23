@@ -1,3 +1,5 @@
+// 1 - Method properties
+// http://es6-features.org/#MethodProperties
 const Random = {
   get: function () {
     return Math.random();
@@ -19,8 +21,15 @@ const Random = {
 
 const readline = require('readline');
 
+// 2 - Class
+// http://es6-features.org/#ClassDefinition
 const Jeu = function(options) {
+  // 3 - Default params
+  // http://es6-features.org/#DefaultParameterValues
   options = options || {};
+
+  // 4 (facultatif) - Destructurer min et max
+  // http://es6-features.org/#ObjectAndArrayMatchingDefaultValues
   const min = options.min || 0;
   const max = (options.max !== undefined) ? options.max : 100;
 
@@ -36,11 +45,15 @@ const Jeu = function(options) {
 
 Jeu.prototype.jouer = function() {
   if (this._essais.length) {
+    // 5 - Template String
+    // http://es6-features.org/#StringInterpolation
     console.log('Vous avez déjà joué : ' + this._essais.join(' | '))
   }
 
   this._rl.question('Quel est le nombre ? ', (saisie) => {
 
+    // 6 - Passer par l'objet Number pour parseInt et isNaN
+    // https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Number
     const nbSaisi = parseInt(saisie);
 
     if (isNaN(nbSaisi)) {
