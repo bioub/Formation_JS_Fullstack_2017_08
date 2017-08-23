@@ -21,7 +21,13 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['env']
+            presets: [
+              ["env", {
+                targets: {
+                  browsers: ["IE 8"]
+                }
+              }]
+            ]
           }
         }
       }
