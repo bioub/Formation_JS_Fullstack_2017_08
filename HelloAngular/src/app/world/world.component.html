@@ -1,0 +1,10 @@
+<div>
+  Prénom : <input [(ngModel)]="prenom">
+</div>
+<p>
+  Bonjour {{prenom}}
+</p>
+
+<p>
+  Format : <input (input)="updateFormat($event)">
+</p>

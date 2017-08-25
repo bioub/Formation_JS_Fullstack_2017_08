@@ -9,12 +9,15 @@
     "webpack-dev-server": "^2.7.1"
   },
   "scripts": {
+    "postinstall": "npm run build:dev",
     "clear": "rimraf dist",
     "serve:dev": "webpack-dev-server",
     "build:dev": "npm run clear && webpack",
     "build:prod": "npm run clear && webpack --optimize-minimize"
   },
   "dependencies": {
-    "core-js": "^2.5.0"
+    "core-js": "^2.5.0",
+    "date-fns": "^1.28.5",
+    "moment": "^2.18.1"
   }
 }

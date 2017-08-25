@@ -1,3 +1,4 @@
+import format from 'date-fns/format'
 
 export class Horloge {
   constructor(container) {
@@ -5,7 +6,7 @@ export class Horloge {
   }
 
   update() {
-    this._container.innerText = new Date();
+    this._container.innerText = format(new Date(), 'hh:mm:ss');
   }
 
   start() {

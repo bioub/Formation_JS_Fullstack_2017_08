@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-sm-3">
+    <div class="list-group">
+      <a class="list-group-item"
+         [routerLink]="[s._id]"
+        *ngFor="let s of societes">
+        {{s.nom}}
+      </a>
+    </div>
+  </div>
+  <div class="col-sm-9">
+    <router-outlet></router-outlet>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<h2>Jean Dupont</h2>
+
+<p>
+  <b>Prénom :</b>
+  {{contact?.prenom}}
+</p>
+
+<p>
+  <b>Nom :</b>
+  {{contact?.nom}}
+</p>
+
+<p *ngIf="contact?.email">
+  <b>Email :</b>
+  {{contact.email}}
+</p>
+
+<p *ngIf="contact?.telephone">
+  <b>Téléphone :</b>
+  {{contact.telephone}}
+</p>
